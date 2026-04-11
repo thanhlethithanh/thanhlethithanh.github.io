@@ -2,213 +2,269 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lê Thị Thanh Thanh | Data Analyst</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230f1f45'/><text y='.9em' font-size='60' x='50' text-anchor='middle' dominant-baseline='middle' dy='.1em' fill='%23b0ccf0' font-family='Segoe UI'>LT</text></svg>">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; color: #222; background: #f5f6f8; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f2f7; color: #1a1a2e; }
     a { text-decoration: none; color: inherit; }
 
-    /* NAV */
-    nav { background: #1a2744; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 60px; position: sticky; top: 0; z-index: 10; }
-    .nav-brand { color: #fff; font-size: 18px; font-weight: 600; }
-    .nav-links { display: flex; gap: 24px; }
-    .nav-links a { color: #b0bcda; font-size: 14px; transition: color 0.2s; }
+    nav { background: #0f1f45; padding: 0 2.5rem; display: flex; justify-content: space-between; align-items: center; height: 64px; position: sticky; top: 0; z-index: 10; }
+    .nav-brand { color: #fff; font-size: 17px; font-weight: 600; letter-spacing: 0.3px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: #8fa8d0; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: #fff; }
 
-    /* HERO */
-    .hero { background: #1a2744; color: #fff; padding: 4rem 2rem 3rem; text-align: center; }
-    .hero-avatar { width: 80px; height: 80px; border-radius: 50%; background: #2e4080; border: 2px solid #4a6fa5; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 600; color: #b0ccf0; margin: 0 auto 1.5rem; }
-    .hero h1 { font-size: 28px; font-weight: 600; margin-bottom: 8px; }
-    .hero p { font-size: 16px; color: #8fa8d0; margin-bottom: 1.5rem; }
-    .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .badge { background: #2e4080; color: #b0ccf0; font-size: 12px; padding: 4px 14px; border-radius: 20px; border: 1px solid #4a6fa5; }
+    .hero { background: #0f1f45; padding: 5rem 2.5rem 5rem; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 48px; background: #f0f2f7; clip-path: ellipse(55% 100% at 50% 100%); }
+    .avatar { width: 96px; height: 96px; border-radius: 50%; background: #1e3a6e; border: 3px solid #3d6ab0; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; color: #b0ccf0; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .hero .subtitle { font-size: 15px; color: #7a9cc8; margin-bottom: 4px; }
+    .hero .location { font-size: 13px; color: #4a6fa5; margin-bottom: 1.5rem; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 1.75rem; }
+    .badge { background: #1e3a6e; color: #9dbfe8; font-size: 11px; padding: 5px 14px; border-radius: 20px; border: 1px solid #2e5fa3; letter-spacing: 0.3px; }
+    .hero-btns { display: flex; gap: 12px; }
+    .btn-primary { background: #2e5fa3; color: #fff; font-size: 13px; padding: 11px 26px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+    .btn-primary:hover { background: #1a4a8a; }
+    .btn-secondary { background: transparent; color: #8fa8d0; font-size: 13px; padding: 11px 26px; border-radius: 8px; border: 1px solid #2e5fa3; cursor: pointer; transition: all 0.2s; }
+    .btn-secondary:hover { background: #1e3a6e; color: #fff; }
 
-    /* SECTIONS */
-    .section { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
-    .section-title { font-size: 12px; font-weight: 700; color: #2e5fa3; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; padding-bottom: 8px; border-bottom: 1px solid #dde3ef; }
+    .section { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem; }
+    .sec-label { font-size: 11px; font-weight: 700; color: #2e5fa3; text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 6px; }
+    .sec-title { font-size: 24px; font-weight: 700; color: #0f1f45; margin-bottom: 1.75rem; padding-bottom: 12px; border-bottom: 2px solid #dde3ef; }
 
-    /* ABOUT */
-    .about-text { font-size: 15px; line-height: 1.9; color: #444; }
+    .about-card { background: #fff; border-radius: 16px; padding: 2rem; border: 1px solid #e0e6f0; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .about-text { font-size: 14px; line-height: 1.9; color: #444; }
+    .stats { display: flex; flex-direction: column; gap: 12px; }
+    .stat { background: #f0f2f7; border-radius: 10px; padding: 1rem 1.25rem; }
+    .stat-number { font-size: 24px; font-weight: 700; color: #0f1f45; }
+    .stat-label { font-size: 12px; color: #777; margin-top: 2px; }
 
-    /* SKILLS */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-    .skill-card { background: #fff; border: 1px solid #e0e6f0; border-radius: 12px; padding: 1rem 1.25rem; }
-    .skill-name { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-    .skill-level { font-size: 12px; color: #888; margin-bottom: 10px; }
-    .skill-bar-bg { height: 4px; background: #e0e6f0; border-radius: 2px; }
-    .skill-bar { height: 4px; border-radius: 2px; background: #2e5fa3; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+    .skill-card { background: #fff; border: 1px solid #e0e6f0; border-top: 3px solid #2e5fa3; border-radius: 14px; padding: 1.25rem; }
+    .skill-name { font-size: 14px; font-weight: 700; color: #0f1f45; margin-bottom: 3px; }
+    .skill-sub { font-size: 12px; color: #888; margin-bottom: 12px; }
+    .bar-bg { height: 5px; background: #e8ecf4; border-radius: 3px; }
+    .bar { height: 5px; border-radius: 3px; background: #2e5fa3; }
 
-    /* PROJECTS */
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .project-card { background: #fff; border: 1px solid #e0e6f0; border-radius: 12px; padding: 1.25rem; }
-    .project-tag { font-size: 11px; font-weight: 600; color: #2e5fa3; background: #e6f1fb; padding: 3px 10px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
-    .project-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-    .project-desc { font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 12px; }
-    .project-link { font-size: 13px; color: #2e5fa3; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .project-card { background: #fff; border: 1px solid #e0e6f0; border-radius: 14px; padding: 1.5rem; display: flex; flex-direction: column; gap: 8px; transition: transform 0.2s; }
+    .project-card:hover { transform: translateY(-3px); }
+    .project-tag { font-size: 11px; font-weight: 700; color: #0c447c; background: #e6f1fb; padding: 4px 10px; border-radius: 6px; display: inline-block; }
+    .project-title { font-size: 16px; font-weight: 700; color: #0f1f45; }
+    .project-desc { font-size: 13px; color: #666; line-height: 1.65; flex: 1; }
+    .project-tools { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    .tool-tag { font-size: 11px; color: #555; background: #f0f2f7; padding: 3px 8px; border-radius: 4px; }
+    .project-link { font-size: 13px; color: #2e5fa3; font-weight: 600; margin-top: 4px; }
     .project-link:hover { text-decoration: underline; }
 
-    /* EXPERIENCE */
-    .exp-item { display: flex; gap: 14px; margin-bottom: 1.5rem; align-items: flex-start; }
-    .exp-dot { width: 10px; height: 10px; border-radius: 50%; background: #2e5fa3; margin-top: 5px; flex-shrink: 0; }
-    .exp-role { font-size: 15px; font-weight: 600; }
-    .exp-company { font-size: 13px; color: #666; margin: 2px 0; }
-    .exp-date { font-size: 12px; color: #2e5fa3; }
-    .exp-desc { font-size: 13px; color: #666; margin-top: 6px; line-height: 1.6; }
+    .exp-list { display: flex; flex-direction: column; }
+    .exp-item { display: flex; gap: 20px; padding: 1.5rem 0; border-bottom: 1px solid #eef0f6; }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-left { width: 130px; flex-shrink: 0; text-align: right; }
+    .exp-date { font-size: 12px; color: #2e5fa3; font-weight: 600; }
+    .exp-dot-row { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 8px; }
+    .exp-dot { width: 10px; height: 10px; border-radius: 50%; background: #2e5fa3; flex-shrink: 0; }
+    .exp-line { flex: 1; height: 1px; background: #dde3ef; }
+    .exp-role { font-size: 15px; font-weight: 700; color: #0f1f45; margin-bottom: 3px; }
+    .exp-company { font-size: 13px; color: #888; margin-bottom: 6px; }
+    .exp-desc { font-size: 13px; color: #555; line-height: 1.65; }
 
-    /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-    .contact-card { background: #fff; border: 1px solid #e0e6f0; border-radius: 12px; padding: 1rem 1.25rem; display: flex; align-items: center; gap: 12px; }
-    .contact-icon { width: 38px; height: 38px; border-radius: 8px; background: #1a2744; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #b0ccf0; flex-shrink: 0; }
-    .contact-label { font-size: 11px; color: #999; margin-bottom: 2px; }
-    .contact-value { font-size: 13px; font-weight: 600; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .contact-card { background: #fff; border: 1px solid #e0e6f0; border-radius: 14px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 14px; }
+    .contact-icon { width: 42px; height: 42px; border-radius: 10px; background: #0f1f45; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #b0ccf0; flex-shrink: 0; }
+    .contact-label { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+    .contact-value { font-size: 14px; font-weight: 600; color: #0f1f45; }
 
-    /* FOOTER */
-    footer { background: #1a2744; color: #8fa8d0; text-align: center; padding: 1.5rem; font-size: 13px; margin-top: 2rem; }
-
-    hr { border: none; border-top: 1px solid #e8ecf4; }
+    footer { background: #0f1f45; color: #4a6fa5; text-align: center; padding: 2rem; font-size: 13px; margin-top: 3rem; }
+    footer span { color: #7a9cc8; }
+    hr { border: none; border-top: 1px solid #e4e8f0; }
   </style>
 </head>
+<script>
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.style.color = '#8fa8d0';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.color = '#ffffff';
+      }
+    });
+  });
+</script>
 <body>
 
-  <nav>
-    <span class="nav-brand">Lê Thị Thanh Thanh</span>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <div class="hero-avatar">LT</div>
-    <h1>Lê Thị Thanh Thanh</h1>
-    <p>Data Analyst &middot; Ho Chi Minh City, Vietnam</p>
-    <div class="hero-badges">
-      <span class="badge">SQL</span>
-      <span class="badge">Excel</span>
-      <span class="badge">Tableau</span>
-      <span class="badge">Google Analytics</span>
-      <span class="badge">Data Visualization</span>
-    </div>
+<nav>
+  <span class="nav-brand">Lê Thị Thanh Thanh</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </div>
+</nav>
 
-  <!-- ABOUT -->
-  <div class="section" id="about">
-    <div class="section-title">About me</div>
-    <p class="about-text">
-      I am a data analyst passionate about turning raw data into meaningful insights that drive business decisions.
-      With experience in Excel, SQL, Tableau, and Google Analytics, I enjoy exploring data to uncover trends,
-      build dashboards, and tell compelling stories through numbers. Currently building my project portfolio
-      and growing my skills in data analysis.
-    </p>
+<div class="hero">
+  <div class="avatar">LT</div>
+  <h1>Lê Thị Thanh Thanh</h1>
+  <div class="subtitle">Data Analyst</div>
+  <div class="location">Ho Chi Minh City, Vietnam</div>
+  <div class="badges">
+    <span class="badge">SQL</span>
+    <span class="badge">Excel</span>
+    <span class="badge">Tableau</span>
+    <span class="badge">Power BI</span>
+    <span class="badge">Google Analytics</span>
   </div>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+    <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+  </div>
+</div>
 
-  <hr>
-
-  <!-- SKILLS -->
-  <div class="section" id="skills">
-    <div class="section-title">Skills</div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-name">Excel / Spreadsheets</div>
-        <div class="skill-level">Pivot tables, VLOOKUP, charts</div>
-        <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-name">SQL</div>
-        <div class="skill-level">Queries, joins, aggregations</div>
-        <div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-name">Tableau / Power BI</div>
-        <div class="skill-level">Dashboards, data visualization</div>
-        <div class="skill-bar-bg"><div class="skill-bar" style="width:70%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-name">Google Analytics</div>
-        <div class="skill-level">Traffic analysis, reporting</div>
-        <div class="skill-bar-bg"><div class="skill-bar" style="width:65%"></div></div>
-      </div>
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="sec-label">Introduction</div>
+  <div class="sec-title">About me</div>
+  <div class="about-card">
+    <p class="about-text">I am a data analyst passionate about turning raw data into meaningful insights that drive business decisions. With hands-on experience in Excel, SQL, Tableau, and Google Analytics, I enjoy uncovering trends, building dashboards, and telling compelling stories through numbers.<br><br>Currently building my project portfolio and continuously growing my skills in data analysis and visualization.</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-number">4+</div><div class="stat-label">Tools &amp; technologies</div></div>
+      <div class="stat"><div class="stat-number">3+</div><div class="stat-label">Projects completed</div></div>
+      <div class="stat"><div class="stat-number">HCMC</div><div class="stat-label">Based in Vietnam</div></div>
     </div>
   </div>
+</div>
 
-  <hr>
+<hr>
 
-  <!-- PROJECTS -->
-  <div class="section" id="projects">
-    <div class="section-title">Projects</div>
-    <div class="projects-grid">
-      <div class="project-card">
-        <span class="project-tag">Case Study</span>
-        <div class="project-title">Bellabeat Case Study</div>
-        <div class="project-desc">Analysis of fitness tracker data to uncover user behavior trends and provide marketing recommendations.</div>
-        <a class="project-link" href="https://github.com/thanhlethithanh/bellabeat-case-study" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="project-card" style="border-style: dashed; opacity: 0.6;">
-        <span class="project-tag">Coming soon</span>
-        <div class="project-title">Project #2</div>
-        <div class="project-desc">Currently in progress — check back soon.</div>
-      </div>
-      <div class="project-card" style="border-style: dashed; opacity: 0.6;">
-        <span class="project-tag">Coming soon</span>
-        <div class="project-title">Project #3</div>
-        <div class="project-desc">Currently in progress — check back soon.</div>
-      </div>
+<!-- SKILLS -->
+<div class="section" id="skills">
+  <div class="sec-label">Expertise</div>
+  <div class="sec-title">Skills</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-name">Excel / Spreadsheets</div>
+      <div class="skill-sub">Pivot tables, VLOOKUP, charts</div>
+      <div class="bar-bg"><div class="bar" style="width:85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">SQL</div>
+      <div class="skill-sub">Queries, joins, aggregations</div>
+      <div class="bar-bg"><div class="bar" style="width:75%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Tableau / Power BI</div>
+      <div class="skill-sub">Dashboards, data visualization</div>
+      <div class="bar-bg"><div class="bar" style="width:70%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Google Analytics</div>
+      <div class="skill-sub">Traffic analysis, reporting</div>
+      <div class="bar-bg"><div class="bar" style="width:65%"></div></div>
     </div>
   </div>
+</div>
 
-  <hr>
+<hr>
 
-  <!-- EXPERIENCE -->
-  <div class="section" id="experience">
-    <div class="section-title">Experience</div>
+<!-- PROJECTS -->
+<div class="section" id="projects">
+  <div class="sec-label">Work</div>
+  <div class="sec-title">Projects</div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-tag">Case Study</span>
+      <div class="project-title">Bellabeat Case Study</div>
+      <div class="project-desc">Analysis of fitness tracker data to uncover user behavior trends and provide data-driven marketing recommendations.</div>
+      <div class="project-tools">
+        <span class="tool-tag">Excel</span>
+        <span class="tool-tag">SQL</span>
+        <span class="tool-tag">Tableau</span>
+      </div>
+      <a class="project-link" href="https://github.com/thanhlethithanh/bellabeat-case-study" target="_blank">View on GitHub →</a>
+    </div>
+    <div class="project-card" style="border-style:dashed;opacity:0.55;">
+      <span class="project-tag">Coming soon</span>
+      <div class="project-title">Project #2</div>
+      <div class="project-desc">In progress — check back soon.</div>
+    </div>
+    <div class="project-card" style="border-style:dashed;opacity:0.55;">
+      <span class="project-tag">Coming soon</span>
+      <div class="project-title">Project #3</div>
+      <div class="project-desc">In progress — check back soon.</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+  <div class="sec-label">Background</div>
+  <div class="sec-title">Experience</div>
+  <div class="exp-list">
     <div class="exp-item">
-      <div class="exp-dot"></div>
+      <div class="exp-left">
+        <div class="exp-date">2024 – Present</div>
+        <div class="exp-dot-row"><div class="exp-line"></div><div class="exp-dot"></div></div>
+      </div>
       <div>
         <div class="exp-role">Data Analyst</div>
         <div class="exp-company">Your Company · Ho Chi Minh City</div>
-        <div class="exp-date">2024 – Present</div>
         <div class="exp-desc">Update this with your real experience and responsibilities.</div>
       </div>
     </div>
-  </div>
-
-  <hr>
-
-  <!-- CONTACT -->
-  <div class="section" id="contact">
-    <div class="section-title">Contact</div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-icon">@</div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">your@email.com</div>
-        </div>
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">2020 – 2024</div>
+        <div class="exp-dot-row"><div class="exp-line"></div><div class="exp-dot"></div></div>
       </div>
-      <div class="contact-card">
-        <div class="contact-icon">in</div>
-        <div>
-          <div class="contact-label">LinkedIn</div>
-          <div class="contact-value">your LinkedIn URL</div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-icon">gh</div>
-        <div>
-          <div class="contact-label">GitHub</div>
-          <div class="contact-value">thanhlethithanh</div>
-        </div>
+      <div>
+        <div class="exp-role">Your Degree</div>
+        <div class="exp-company">Your University · Ho Chi Minh City</div>
+        <div class="exp-desc">Add your education details here.</div>
       </div>
     </div>
   </div>
+</div>
 
-  <footer>
-    &copy; 2026 Lê Thị Thanh Thanh &middot; Data Analyst
-  </footer>
+<hr>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <div class="sec-label">Get in touch</div>
+  <div class="sec-title">Contact</div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">@</div>
+      <div><div class="contact-label">Email</div><div class="contact-value">your@email.com</div></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">in</div>
+      <div><div class="contact-label">LinkedIn</div><div class="contact-value">your LinkedIn URL</div></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">gh</div>
+      <div><div class="contact-label">GitHub</div><div class="contact-value">thanhlethithanh</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 <span>Lê Thị Thanh Thanh</span> &middot; Data Analyst &middot; Ho Chi Minh City, Vietnam
+</footer>
 
 </body>
 </html>
