@@ -19,7 +19,7 @@
 
     .hero { background: #0f1f45; padding: 5rem 2.5rem 5rem; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
     .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 48px; background: #f0f2f7; clip-path: ellipse(55% 100% at 50% 100%); }
-    .avatar { width: 96px; height: 96px; border-radius: 50%; background: #1e3a6e; border: 3px solid #3d6ab0; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; color: #b0ccf0; margin-bottom: 1.5rem; }
+    .avatar { width: 96px; height: 96px; border-radius: 50%; border: 3px solid #3d6ab0; margin-bottom: 1.5rem; object-fit: cover; }
     .hero h1 { font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 8px; }
     .hero .subtitle { font-size: 15px; color: #7a9cc8; margin-bottom: 4px; }
     .hero .location { font-size: 13px; color: #4a6fa5; margin-bottom: 1.5rem; }
@@ -116,7 +116,7 @@
 </nav>
 
 <div class="hero">
-  <div class="avatar">LT</div>
+  <img src="portrait1.png" alt="Lê Thị Thanh Thanh" class="avatar">
   <h1>Lê Thị Thanh Thanh</h1>
   <div class="subtitle">Data Analyst</div>
   <div class="location">Ho Chi Minh City, Vietnam</div>
