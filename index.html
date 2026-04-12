@@ -21,20 +21,48 @@
   </div>
 </nav>
 
-<!-- HOME -->
+/*HOME*/
 <section class="hero" id="home">
-  <div class="hero-left">
-    <div class="hero-tag"><span>Data Analyst</span> Portfolio</div>
-    <h1>LÊ THỊ<br><span class="accent">THANH</span><br>THANH</h1>
-    <p class="hero-sub">I help people find <span class="accent">insights</span> through <span class="accent">data</span></p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-outline">View Projects</a>
-      <a href="#contact" class="btn-fill">Contact Me</a>
+  <div class="hero-container">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      
+      <div class="hero-tag">
+        <span>Data Analyst</span> Portfolio
+      </div>
+
+      <h1 class="hero-name">
+        LE THI<br>
+        <span class="accent">THANH THANH</span>
+      </h1>
+
+      <p class="hero-sub">
+        I turn raw data into <span class="accent">actionable insights</span><br>
+        using <span class="accent">SQL, Excel, and Power BI</span>
+      </p>
+
+      <div class="hero-btns">
+        <a href="#projects" class="btn-fill">View My Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+
+      <p class="hero-proof">
+        3+ Projects • SQL • Excel • Power BI
+      </p>
+
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-img-wrap">
-      <img src="images/portrait1.png" alt="Thanh Thanh" class="hero-img">
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="hero-img-bg">
+        <div class="hero-img-wrap">
+          <img src="images/portrait1.png" alt="Portrait of Thanh Thanh" class="hero-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down">
+    <span></span>
     </div>
   </div>
 </section>
@@ -42,21 +70,25 @@
 <!-- ABOUT -->
 <section class="section dark-section" id="about">
   <div class="about-left">
-    <div class="section-tag">About Me</div>
-    <h2>Hello,<br>I'm <span class="accent">Thanh Thanh!</span></h2>
+    <div class="section-tag" style="margin-left:auto; display:inline-block;">
+         About Me
+    </div>
+    <h2>Hello,<br>I'm <span class="accent">Thanh!</span></h2>
   </div>
   <div class="about-right">
     <p class="about-text">
-      <span class="accent bold">Data Analyst</span> passionate about turning raw data into meaningful insights that drive business decisions. Proficient in
-      <span class="accent bold">SQL, Excel, Tableau, Power BI,</span> and <span class="accent bold">Google Analytics</span> for comprehensive data analysis and visualization.
-      <br><br>
-      Comfortable with end-to-end data analysis, dashboard creation, and presenting actionable insights through effective storytelling.
+        I’m a <span class="accent bold">Data Analyst</span> who enjoys turning messy data into clear, meaningful insights.
+        I work with <span class="accent bold">SQL, Excel, Power BI, and Tableau</span> to analyze data, build dashboards, and support decision-making.
+        I’m especially interested in solving business problems through data and continuously improving my analytical thinking.
     </p>
     <div class="about-icons">
       <a href="mailto:thanhthanhlt250403@outlook.com" class="icon-circle">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-circle">
+      <a href="https://zalo.me/0982003070" target="_blank" class="icon-circle zalo">
+        <span>Zalo</span>
+      </a>
+      <a href="https://www.linkedin.com/in/thanh-l%C3%AA-th%E1%BB%8B-thanh-454438292/" target="_blank" class="icon-circle">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
       <a href="https://github.com/thanhlethithanh" target="_blank" class="icon-circle">
@@ -65,7 +97,7 @@
     </div>
     <div class="about-btns">
       <a href="#projects" class="btn-outline">Projects</a>
-      <a href="#" class="btn-fill">Download CV</a>
+      <a href="https://drive.google.com/file/d/18IHaQU2vh0vJJVKV5n89os10b1w_5fJ2/view?usp=sharing" target="_blank" class="btn-fill">View My CV ↗</a>
     </div>
   </div>
 </section>
@@ -159,27 +191,43 @@
 </section>
 
 <!-- PROJECTS -->
-<section class="section light-section" id="projects">
-  <div class="section-tag dark">Projects</div>
+ <div class="project-block dark-style">
 
-  <div class="project-block">
+  <!-- TOP -->
+  <div class="project-header">
     <div class="project-number">01</div>
-    <div class="project-header accent bold">BELLABEAT CASE STUDY</div>
-    <div class="project-images">
-      <img src="images/portrait1.png" alt="Project" class="proj-img-placeholder">
-    </div>
-    <div class="project-bottom">
-      <div class="project-desc-col">
-        <p>Analysis of fitness tracker data to uncover <span class="accent bold">user behavior trends</span> and provide <span class="accent bold">data-driven marketing recommendations</span> for Bellabeat products.</p>
-        <p class="proj-meta"><span class="accent bold">Tools:</span> Excel, SQL, Tableau</p>
-        <p class="proj-meta"><span class="accent bold">Analysis:</span> EDA, Trend Analysis</p>
-      </div>
-      <div class="project-links-col">
-        <a href="projects/bellabeat.html" target="_blank" class="proj-btn">Full Report</a>
-        <a href="https://github.com/thanhlethithanh/bellabeat-case-study" target="_blank" class="proj-btn">GitHub</a>
-      </div>
-    </div>
+    <h2 class="project-title">
+      BELLABEAT CASE STUDY
+    </h2>
   </div>
+
+  <!-- IMAGE -->
+  <div class="project-banner">
+    <img src="images/bella1.png" alt="BellaBeat Case Study">
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="project-footer">
+
+    <div class="project-desc">
+      <p>
+        Analysis of fitness tracker data to uncover 
+        <span class="accent">user behavior trends</span> 
+        and provide data-driven recommendations.
+      </p>
+
+      <p><b>Tools:</b> Excel, SQL, Tableau</p>
+      <p><b>Analysis:</b> EDA, Trend Analysis</p>
+    </div>
+
+    <div class="project-actions">
+      <a href="#" class="proj-btn">Full Report</a>
+      <a href="#" class="proj-btn">GitHub</a>
+    </div>
+
+  </div>
+
+</div>
 
   <div class="project-block coming">
     <div class="project-number faded">02</div>
