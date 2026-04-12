@@ -10,159 +10,219 @@
 <body>
 
 <nav>
-  <span class="nav-brand">Lê Thị Thanh Thanh</span>
+  <span class="nav-brand">TT</span>
   <div class="nav-links">
-    <a href="#about">About</a>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Background</a>
     <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<div class="hero">
-  <img src="images/portrait1.png" alt="Lê Thị Thanh Thanh" class="avatar">
-  <h1>Lê Thị Thanh Thanh</h1>
-  <div class="subtitle">Data Analyst</div>
-  <div class="location">Ho Chi Minh City, Vietnam</div>
-  <div class="badges">
-    <span class="badge"><img src="images/SQL.png" width="14" height="14"> SQL</span>
-    <span class="badge"><img src="images/excel.png" width="14" height="14"> Excel</span>
-    <span class="badge"><img src="images/powerbi.png" width="14" height="14"> Power BI</span>
-    <span class="badge"><img src="images/python.png" width="14" height="14"> Python</span>
-  </div>
-  <div class="hero-btns">
-    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
-    <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
-  </div>
-</div>
-
-<div class="section" id="about">
-  <div class="sec-label">Introduction</div>
-  <div class="sec-title">About me</div>
-  <div class="about-card">
-    <p class="about-text">I am a data analyst passionate about turning raw data into meaningful insights that drive business decisions. With hands-on experience in Excel, SQL, Tableau, and Google Analytics, I enjoy uncovering trends, building dashboards, and telling compelling stories through numbers.<br><br>Currently building my project portfolio and continuously growing my skills in data analysis and visualization.</p>
-    <div class="stats">
-      <div class="stat"><div class="stat-number">4+</div><div class="stat-label">Tools &amp; technologies</div></div>
-      <div class="stat"><div class="stat-number">3+</div><div class="stat-label">Projects completed</div></div>
-      <div class="stat"><div class="stat-number">HCMC</div><div class="stat-label">Based in Vietnam</div></div>
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-tag"><span>Data Analyst</span> Portfolio</div>
+    <h1>LÊ THỊ<br><span class="accent">THANH</span><br>THANH</h1>
+    <p class="hero-sub">I help people find <span class="accent">insights</span> through <span class="accent">data</span></p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-outline">View Projects</a>
+      <a href="#contact" class="btn-fill">Contact Me</a>
     </div>
   </div>
-</div>
-
-<hr>
-
-<div class="section" id="skills">
-  <div class="sec-label">Expertise</div>
-  <div class="sec-title">Skills</div>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-name">Excel / Spreadsheets</div>
-      <div class="skill-sub">Pivot tables, VLOOKUP, charts</div>
-      <div class="bar-bg"><div class="bar" style="width:85%"></div></div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">SQL</div>
-      <div class="skill-sub">Queries, joins, aggregations</div>
-      <div class="bar-bg"><div class="bar" style="width:75%"></div></div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Tableau / Power BI</div>
-      <div class="skill-sub">Dashboards, data visualization</div>
-      <div class="bar-bg"><div class="bar" style="width:70%"></div></div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Google Analytics</div>
-      <div class="skill-sub">Traffic analysis, reporting</div>
-      <div class="bar-bg"><div class="bar" style="width:65%"></div></div>
+  <div class="hero-right">
+    <div class="hero-img-wrap">
+      <img src="images/portrait1.png" alt="Thanh Thanh" class="hero-img">
     </div>
   </div>
-</div>
+</section>
 
-<hr>
+<!-- ABOUT -->
+<section class="section dark-section" id="about">
+  <div class="about-left">
+    <div class="section-tag">About Me</div>
+    <h2>Hello,<br>I'm <span class="accent">Thanh Thanh!</span></h2>
+  </div>
+  <div class="about-right">
+    <p class="about-text">
+      <span class="accent bold">Data Analyst</span> passionate about turning raw data into meaningful insights that drive business decisions. Proficient in
+      <span class="accent bold">SQL, Excel, Tableau, Power BI,</span> and <span class="accent bold">Google Analytics</span> for comprehensive data analysis and visualization.
+      <br><br>
+      Comfortable with end-to-end data analysis, dashboard creation, and presenting actionable insights through effective storytelling.
+    </p>
+    <div class="about-icons">
+      <a href="mailto:thanhthanhlt250403@outlook.com" class="icon-circle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="icon-circle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/thanhlethithanh" target="_blank" class="icon-circle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.52-4.48-10-10-10z"/></svg>
+      </a>
+    </div>
+    <div class="about-btns">
+      <a href="#projects" class="btn-outline">Projects</a>
+      <a href="#" class="btn-fill">Download CV</a>
+    </div>
+  </div>
+</section>
 
-<div class="section" id="projects">
-  <div class="sec-label">Work</div>
-  <div class="sec-title">Projects</div>
-  <div class="projects-grid">
-    <a href="projects/bellabeat.html" class="project-card">
-      <span class="project-tag">Case Study</span>
-      <div class="project-title">Bellabeat Case Study</div>
-      <div class="project-desc">Analysis of fitness tracker data to uncover user behavior trends and provide data-driven marketing recommendations.</div>
-      <div class="project-tools">
-        <span class="tool-tag">Excel</span>
-        <span class="tool-tag">SQL</span>
-        <span class="tool-tag">Tableau</span>
+<!-- SKILLS -->
+<section class="section light-section" id="skills">
+  <div class="section-tag dark">Technical Skills</div>
+  <div class="skills-columns">
+    <div class="skill-col">
+      <h3 class="skill-col-title">Programming</h3>
+      <div class="skill-item">
+        <img src="images/SQL.png" width="40" height="40" alt="SQL">
+        <span>SQL</span>
       </div>
-      <span class="project-link">View Project →</span>
-    </a>
-    <div class="project-card" style="border-style:dashed;opacity:0.55;">
-      <span class="project-tag">Coming soon</span>
-      <div class="project-title">Project #2</div>
-      <div class="project-desc">In progress — check back soon.</div>
-    </div>
-    <div class="project-card" style="border-style:dashed;opacity:0.55;">
-      <span class="project-tag">Coming soon</span>
-      <div class="project-title">Project #3</div>
-      <div class="project-desc">In progress — check back soon.</div>
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<div class="section" id="experience">
-  <div class="sec-label">Background</div>
-  <div class="sec-title">Experience</div>
-  <div class="exp-list">
-    <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">2024 – Present</div>
-        <div class="exp-dot-row"><div class="exp-line"></div><div class="exp-dot"></div></div>
-      </div>
-      <div>
-        <div class="exp-role">Data Analyst</div>
-        <div class="exp-company">Your Company · Ho Chi Minh City</div>
-        <div class="exp-desc">Update this with your real experience and responsibilities.</div>
+      <div class="skill-item">
+        <img src="images/python.png" width="40" height="40" alt="Python">
+        <span>Python</span>
       </div>
     </div>
-    <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">2020 – 2024</div>
-        <div class="exp-dot-row"><div class="exp-line"></div><div class="exp-dot"></div></div>
+    <div class="skill-divider"></div>
+    <div class="skill-col">
+      <h3 class="skill-col-title">Analytic Tools</h3>
+      <div class="skill-item">
+        <img src="images/excel.png" width="40" height="40" alt="Excel">
+        <span>Microsoft Excel</span>
       </div>
-      <div>
-        <div class="exp-role">Your Degree</div>
-        <div class="exp-company">Your University · Ho Chi Minh City</div>
-        <div class="exp-desc">Add your education details here.</div>
+      <div class="skill-item">
+        <img src="images/powerbi.png" width="40" height="40" alt="Power BI">
+        <span>Power BI</span>
+      </div>
+    </div>
+    <div class="skill-divider"></div>
+    <div class="skill-col">
+      <h3 class="skill-col-title">Visualization</h3>
+      <div class="skill-item">
+        <div class="skill-icon-placeholder">T</div>
+        <span>Tableau</span>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon-placeholder">GA</div>
+        <span>Google Analytics</span>
+      </div>
+    </div>
+    <div class="skill-divider"></div>
+    <div class="skill-col">
+      <h3 class="skill-col-title">Methods</h3>
+      <ul class="method-list">
+        <li>EDA</li>
+        <li>Data Cleaning</li>
+        <li>Dashboard Design</li>
+        <li>Data Storytelling</li>
+        <li>A/B Testing</li>
+        <li>Cohort Analysis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BACKGROUND -->
+<section class="section dark-section" id="experience">
+  <div class="section-tag">Education & Experience Background</div>
+  <div class="bg-columns">
+    <div class="bg-col">
+      <h3 class="bg-col-title">Education</h3>
+      <div class="bg-item">
+        <div class="bg-logo">U</div>
+        <div>
+          <div class="bg-org accent bold">Your University</div>
+          <ul class="bg-list">
+            <li><span class="accent">Your Degree</span> (2020 – 2024)</li>
+            <li>Add details about your studies here</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-divider"></div>
+    <div class="bg-col">
+      <h3 class="bg-col-title">Experience</h3>
+      <div class="bg-item">
+        <div class="bg-logo">C</div>
+        <div>
+          <div class="bg-org accent bold">Your Company</div>
+          <ul class="bg-list">
+            <li><span class="accent">Data Analyst</span> (Full time, 2024 – Present)</li>
+            <li>Update with your real responsibilities here</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<hr>
+<!-- PROJECTS -->
+<section class="section light-section" id="projects">
+  <div class="section-tag dark">Projects</div>
 
-<div class="section" id="contact">
-  <div class="sec-label">Get in touch</div>
-  <div class="sec-title">Contact</div>
-  <div class="contact-grid">
-    <a href="mailto:your@email.com" class="contact-card">
-      <div class="contact-icon">@</div>
-      <div><div class="contact-label">Email</div><div class="contact-value">your@email.com</div></div>
-    </a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-card">
-      <div class="contact-icon">in</div>
-      <div><div class="contact-label">LinkedIn</div><div class="contact-value">Thanh Thanh</div></div>
-    </a>
-    <a href="https://github.com/thanhlethithanh" target="_blank" class="contact-card">
-      <div class="contact-icon">gh</div>
-      <div><div class="contact-label">GitHub</div><div class="contact-value">thanhlethithanh</div></div>
-    </a>
+  <div class="project-block">
+    <div class="project-number">01</div>
+    <div class="project-header accent bold">BELLABEAT CASE STUDY</div>
+    <div class="project-images">
+      <img src="images/portrait1.png" alt="Project" class="proj-img-placeholder">
+    </div>
+    <div class="project-bottom">
+      <div class="project-desc-col">
+        <p>Analysis of fitness tracker data to uncover <span class="accent bold">user behavior trends</span> and provide <span class="accent bold">data-driven marketing recommendations</span> for Bellabeat products.</p>
+        <p class="proj-meta"><span class="accent bold">Tools:</span> Excel, SQL, Tableau</p>
+        <p class="proj-meta"><span class="accent bold">Analysis:</span> EDA, Trend Analysis</p>
+      </div>
+      <div class="project-links-col">
+        <a href="projects/bellabeat.html" target="_blank" class="proj-btn">Full Report</a>
+        <a href="https://github.com/thanhlethithanh/bellabeat-case-study" target="_blank" class="proj-btn">GitHub</a>
+      </div>
+    </div>
   </div>
-</div>
+
+  <div class="project-block coming">
+    <div class="project-number faded">02</div>
+    <div class="project-header faded">PROJECT #2 — COMING SOON</div>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section dark-section" id="contact">
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <div class="section-tag">Contact Info</div>
+      <div class="contact-item">
+        <span class="contact-label">E-mail</span>
+        <a href="mailto:thanhthanhlt250403@outlook.com" class="contact-value accent">thanhthanhlt250403@outlook.com</a>
+        <div class="icon-circle sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-value accent">linkedin.com/in/yourprofile</a>
+        <div class="icon-circle sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/thanhlethithanh" target="_blank" class="contact-value accent">github.com/thanhlethithanh</a>
+        <div class="icon-circle sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h2>Let's <span class="accent">connect</span> and<br><span class="accent">work together!</span></h2>
+    </div>
+  </div>
+</section>
 
 <footer>
-  &copy; 2026 <span>Lê Thị Thanh Thanh</span> &middot; Data Analyst &middot; Ho Chi Minh City, Vietnam
+  &copy; 2026 <span class="accent">Lê Thị Thanh Thanh</span> &middot; Data Analyst &middot; Ho Chi Minh City, Vietnam
 </footer>
 
 <script src="js/main.js"></script>
