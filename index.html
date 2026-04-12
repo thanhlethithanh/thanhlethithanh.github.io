@@ -4,32 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thanh Thanh | Data Analyst</title>
-  <link rel="icon" type="image/png" href="images/portrait2.png">
+  <link rel="icon" type="image/png" href="images/portrait1.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<div class="progress-bar"></div>
 <nav>
-  <span class="nav-brand">TT</span>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Background</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#" class="nav-brand">
+    THANH
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" class="active"></a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-/*HOME*/
-<section class="hero" id="home">
+
+
+<!-- HOME -->
+
+<section class="hero" class="fade-in" id="home">
   <div class="hero-container">
 
     <!-- LEFT -->
     <div class="hero-left">
       
       <div class="hero-tag">
-        <span>Data Analyst</span> Portfolio
+        <span>Data Analyst</span> <span class="highlight">Portfolio</span>
       </div>
 
       <h1 class="hero-name">
@@ -57,7 +61,7 @@
     <div class="hero-right">
       <div class="hero-img-bg">
         <div class="hero-img-wrap">
-          <img src="images/portrait1.png" alt="Portrait of Thanh Thanh" class="hero-img" loading="lazy">
+          <img src="images/portrait1.png" alt="My Portrait" class="hero-img" loading="lazy">
         </div>
       </div>
     </div>
@@ -70,7 +74,7 @@
 <!-- ABOUT -->
 <section class="section dark-section" id="about">
   <div class="about-left">
-    <div class="section-tag" style="margin-left:auto; display:inline-block;">
+    <div class="section-tag" style="text-align: left; margin-right: auto;display:inline-block; border-color:#4a9eff; color:#4a9eff;">
          About Me
     </div>
     <h2>Hello,<br>I'm <span class="accent">Thanh!</span></h2>
@@ -104,7 +108,7 @@
 
 <!-- SKILLS -->
 <section class="section light-section" id="skills">
-  <div class="section-tag dark">Technical Skills</div>
+  <div class="section-tag">Technical Skills</div>
   <div class="skills-columns">
     <div class="skill-col">
       <h3 class="skill-col-title">Programming</h3>
@@ -142,51 +146,7 @@
       </div>
     </div>
     <div class="skill-divider"></div>
-    <div class="skill-col">
-      <h3 class="skill-col-title">Methods</h3>
-      <ul class="method-list">
-        <li>EDA</li>
-        <li>Data Cleaning</li>
-        <li>Dashboard Design</li>
-        <li>Data Storytelling</li>
-        <li>A/B Testing</li>
-        <li>Cohort Analysis</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- BACKGROUND -->
-<section class="section dark-section" id="experience">
-  <div class="section-tag">Education & Experience Background</div>
-  <div class="bg-columns">
-    <div class="bg-col">
-      <h3 class="bg-col-title">Education</h3>
-      <div class="bg-item">
-        <div class="bg-logo">U</div>
-        <div>
-          <div class="bg-org accent bold">Your University</div>
-          <ul class="bg-list">
-            <li><span class="accent">Your Degree</span> (2020 – 2024)</li>
-            <li>Add details about your studies here</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="bg-divider"></div>
-    <div class="bg-col">
-      <h3 class="bg-col-title">Experience</h3>
-      <div class="bg-item">
-        <div class="bg-logo">C</div>
-        <div>
-          <div class="bg-org accent bold">Your Company</div>
-          <ul class="bg-list">
-            <li><span class="accent">Data Analyst</span> (Full time, 2024 – Present)</li>
-            <li>Update with your real responsibilities here</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  
   </div>
 </section>
 
@@ -241,30 +201,54 @@
   <div class="contact-wrap">
     <div class="contact-left">
       <div class="section-tag">Contact Info</div>
-      <div class="contact-item">
-        <span class="contact-label">E-mail</span>
-        <a href="mailto:thanhthanhlt250403@outlook.com" class="contact-value accent">thanhthanhlt250403@outlook.com</a>
-        <div class="icon-circle sm">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+
+      <a href="mailto:thanhthanhlt250403@outlook.com" class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
         </div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">LinkedIn</span>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-value accent">linkedin.com/in/yourprofile</a>
-        <div class="icon-circle sm">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        <div class="contact-meta">
+          <span class="contact-label">E-mail</span>
+          <span class="contact-value">thanhthanhlt250403@outlook.com</span>
         </div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">GitHub</span>
-        <a href="https://github.com/thanhlethithanh" target="_blank" class="contact-value accent">github.com/thanhlethithanh</a>
-        <div class="icon-circle sm">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        <span class="contact-arrow">→</span>
+      </a>
+
+      <a href="tel:+84123456789" class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </div>
-      </div>
+        <div class="contact-meta">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+84 123 456 789</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div class="contact-meta">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/yourprofile</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+
+      <a href="https://github.com/thanhlethithanh" target="_blank" class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        </div>
+        <div class="contact-meta">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/thanhlethithanh</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
     </div>
+
     <div class="contact-right">
-      <h2>Let's <span class="accent">connect</span> and<br><span class="accent">work together!</span></h2>
+      <h2>Let's <span class="accent">connect</span> and work <span class="accent">together.</span></h2>
     </div>
   </div>
 </section>
