@@ -1,7 +1,16 @@
+// =====================
+// ELEMENTS
+// =====================
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('.nav-links a');
+const progressBar = document.querySelector('.progress-bar');
+const phoneItem = document.getElementById('copy-phone');
+const phoneText = document.getElementById('phone-text');
 
-window.addEventListener('scroll', () => {
+// =====================
+// NAV ACTIVE ON SCROLL
+// =====================
+function updateActiveNav() {
   let current = '';
 
   sections.forEach(section => {
@@ -17,19 +26,68 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
-});
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.2 });
+}
 
-window.addEventListener('scroll', () => {
+// =====================
+// SCROLL PROGRESS BAR
+// =====================
+function updateProgressBar() {
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const progress = (scrollTop / docHeight) * 100;
 
-  document.querySelector('.progress-bar').style.width = progress + '%';
-});
+  progressBar.style.width = progress + '%';
+}
+
+// =====================
+// COPY PHONE
+// =====================
+function setupCopyPhone() {
+  const phoneItem = document.getElementById('copy-phone');
+  const phoneText = document.getElementById('phone-text');
+  const toast = document.getElementById('copy-toast');
+
+  if (!phoneItem) return;
+
+  phoneItem.addEventListener('click', () => {
+    navigator.clipboard.writeText(phoneText.textContent);
+
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 1500);
+  });
+}
+
+// =====================
+// FADE-IN OBSERVER
+// =====================
+function setupFadeIn() {
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+// =====================
+// INIT
+// =====================
+function init() {
+  setupCopyPhone();
+  setupFadeIn();
+
+  window.addEventListener('scroll', () => {
+    updateActiveNav();
+    updateProgressBar();
+  });
+}
+
+init();

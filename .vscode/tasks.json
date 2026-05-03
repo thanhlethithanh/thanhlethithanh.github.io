@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install portfolio dependencies",
+      "type": "process",
+      "command": "${workspaceFolder}/venv/Scripts/python.exe",
+      "args": ["-m", "pip", "install", "-r", "requirements.txt"],
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Launch Jupyter Lab",
+      "type": "process",
+      "command": "${workspaceFolder}/venv/Scripts/python.exe",
+      "args": ["-m", "jupyter", "lab"],
+      "problemMatcher": [],
+      "group": {"kind": "none", "isDefault": false}
+    }
+  ]
+}

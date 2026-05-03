@@ -1,0 +1,10 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "files.exclude": {
+    "**/.ipynb_checkpoints": true,
+    "**/__pycache__": true,
+    "venv": true
+  },
+  "jupyter.defaultKernel": "Python 3"
+}
