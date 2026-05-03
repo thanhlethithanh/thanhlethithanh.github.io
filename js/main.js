@@ -8,8 +8,9 @@ const phoneItem = document.getElementById('copy-phone');
 const phoneText = document.getElementById('phone-text');
 
 // =====================
-// NAV ACTIVE ON SCROLL
+// NAV ACTIVE ON SCROLL (THROTTLED)
 // =====================
+let lastScrollUpdate = 0;
 function updateActiveNav() {
   let current = '';
 
@@ -37,6 +38,16 @@ function updateProgressBar() {
   const progress = (scrollTop / docHeight) * 100;
 
   progressBar.style.width = progress + '%';
+}
+
+// Throttle scroll events
+function throttledScroll() {
+  const now = Date.now();
+  if (now - lastScrollUpdate > 100) {
+    updateActiveNav();
+    updateProgressBar();
+    lastScrollUpdate = now;
+  }
 }
 
 // =====================
@@ -84,10 +95,7 @@ function init() {
   setupCopyPhone();
   setupFadeIn();
 
-  window.addEventListener('scroll', () => {
-    updateActiveNav();
-    updateProgressBar();
-  });
+  window.addEventListener('scroll', throttledScroll, { passive: true });
 }
 
 init();
