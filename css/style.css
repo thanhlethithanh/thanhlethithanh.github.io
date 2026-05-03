@@ -4,8 +4,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   scroll-snap-type: y mandatory;
-  background: radial-gradient(circle at 20% 20%, rgba(74,158,255,0.18), transparent 25%),
-              radial-gradient(circle at 80% 10%, rgba(255,255,255,0.08), transparent 18%),
+  background: radial-gradient(circle at 15% 10%, rgba(74,158,255,0.18), transparent 24%),
+              radial-gradient(circle at 85% 18%, rgba(255,255,255,0.08), transparent 16%),
               linear-gradient(180deg, #07111f 0%, #050a14 100%);
   min-height: 100vh;
   overflow-x: hidden;
@@ -29,24 +29,25 @@ a { text-decoration: none; color: inherit; }
   filter: blur(45px);
   opacity: 0.7;
   pointer-events: none;
+  z-index: 0;
   animation: floatBg 18s ease-in-out infinite;
 }
 
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -10%;
-  right: -10%;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 55%),
-              radial-gradient(circle, rgba(255,255,255,0.85) 0%, transparent 40%),
-              radial-gradient(circle, rgba(74,158,255,0.45) 0%, transparent 48%);
-  background-size: 10px 10px, 20px 20px, 6px 6px;
-  background-position: 16% 30%, 65% 18%, 82% 72%;
+  bottom: -5%;
+  right: -5%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%),
+              radial-gradient(circle, rgba(74,158,255,0.35) 0%, transparent 45%);
+  background-size: 10px 10px, 15px 15px;
+  background-position: 18% 28%, 72% 68%;
   filter: blur(20px);
-  opacity: 0.65;
+  opacity: 0.55;
   pointer-events: none;
+  z-index: 0;
   animation: particleDrift 22s linear infinite;
 }
 
@@ -188,9 +189,28 @@ nav {
 .hero-img { width:100%; height:100%; object-fit:cover; }
 
 .accent { color:#4a9eff; }
-.scroll-down { display: inline-block; cursor: pointer; position:absolute; bottom:20px; left:50%; transform:translateX(-50%); z-index: 5; }
-.scroll-down span { display:block; width:22px; height:22px; border-bottom:2px solid #4a9eff; 
-  border-right:2px solid #4a9eff; transform:rotate(45deg); animation:scrollDown 1s infinite; }
+.scroll-down {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.scroll-down span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-bottom: 2px solid #4a9eff;
+  border-right: 2px solid #4a9eff;
+  transform: rotate(45deg);
+  animation: scrollDown 1s infinite;
+}
 
 @keyframes scrollDown { 0% { opacity:0; transform:rotate(45deg) translate(-6px,-6px); } 50% { opacity:1; } 100% { opacity:0; transform:rotate(45deg) translate(6px,6px); } }
 @keyframes fadeUp { from { transform:translateY(30px); opacity:0; } to { transform:translateY(0); opacity:1; } }
