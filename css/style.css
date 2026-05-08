@@ -108,8 +108,7 @@ a {
 }
 
 .section {
-  min-height: 100vh;
-  padding-top: 80px;
+  padding: 80px 0;
   position: relative;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -1003,23 +1002,37 @@ footer {
 }
 
 @media (max-width: 1024px) {
+
+  .skills-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .skills-title {
+    margin-bottom: 2rem;
+  }
+
   .skills-columns {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+    margin-top: 0;
   }
+
   .skill-col {
     min-width: 0;
     padding: 1.75rem 1.5rem;
   }
+
   .skill-item {
     gap: 12px;
   }
+
   .skill-icon,
   .skill-icon-img {
     width: 44px;
     height: 44px;
   }
+
 }
 
 @media (max-width: 768px) {
